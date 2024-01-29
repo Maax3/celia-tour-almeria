@@ -1,0 +1,95 @@
+.addScene {
+    height: auto;
+    /*border: 1px solid red;*/
+    position: relative;
+    float: left;
+    margin-left: 5%;
+}
+
+#addScene .icon, .addScene .icon, #map .icon, #modalportkey .icon, #zoneicon .icon{
+    width: 2.2%;
+    position: absolute;
+}
+
+#zoneImage .icon {
+    transition: all 0.3s linear;
+}
+
+#zoneImage .icon:hover {
+    transform: scale(1.5);
+    filter: drop-shadow(0px 2px 1px #6e00ff)
+            drop-shadow(2px 0px 1px #6e00ff)
+            drop-shadow(0px -2px 1px #6e00ff)
+            drop-shadow(-2px 0px 1px #6e00ff);
+}
+
+.iconHover:hover {
+    width: 2.6%;
+}
+
+.scenepoint {
+    cursor: pointer;
+    width: 100%;
+}
+
+.newScenePoint {
+    width: 100%;
+}
+
+#menuModalAddScene {
+    float: left;
+    border: 2px solid black;
+    margin: 4% 0 0 3%;
+    display: none;
+}
+
+.closeModalButton {
+    position: absolute;
+    float: left;
+    width: 40px;
+    margin-left: 95%;
+    margin-top: 2%;
+}
+
+.closeModalButton > img {
+    width: 100%;
+}
+
+#changeZone {
+    position: absolute;
+    left: 75%;
+    top: 77%;
+    width: 6%;
+}
+
+.oneZone{
+    margin-bottom: 3.5%;
+}
+
+.zoneImgForChange:hover {
+    cursor: pointer;
+}
+
+.floorDown, .floorUp{
+    padding: 7px 13px;
+    transition: transform 0.3s ease;
+    pointer-events: all;
+}
+
+.floorDown:hover, .floorUp:hover{
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+#buttonsFloorCont{
+    bottom: 0;
+}
+
+#zoneImage{
+    position: relative;
+    width: 100%;
+}
+
+.zoneicon {
+    display: none;
+}

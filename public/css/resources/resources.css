@@ -1,0 +1,45 @@
+/*Para poner los errores de formulario en rojo*/
+p.claseroja{
+    color: red;
+}
+/*Estilo para el botón de cerrar subir recursos*/
+#iconClose{
+    display: none;
+}
+/*Estilo para el botón de eliminar recursos*/
+#iconCloseD{
+    display: none;
+}
+/*Estilo del dropzone:*/
+#dzone{
+    display: none;
+}
+/*Estilo para el subir video:*/
+#video{
+    display: none;
+}
+/*Estilo para la ventana modal de editar recurso:*/
+#edit{
+    display: none;
+}
+/*CSS del añadir subtitulos:*/
+#fileSubt{
+    display: none;
+}
+/*CSS de la modal para eliminar recursos*/
+#confirmDelete{
+    display: none;
+    width: 25%!important;
+}
+/*CSS de la modal de alerta*/
+#alertaD{
+    display: none;
+    width: 36%!important;
+}
+#ACEP{
+    margin-left: 30%!important;
+}
+
+#aceptDelete, #cancelDelete {
+    width: 48%!important;
+}
