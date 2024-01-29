@@ -23,13 +23,12 @@ class Install extends Controller
         //Antigua SQL -> SHOW TABLES LIKE 'users' y n:  >0
         //---Nueva SQL
         $consulta = "SELECT COUNT(*) FROM users";
-        //Comprueba si hay + de una fila, si es true reedirige a /login (count siempre devuelve 1, al crear 1 usuario nuevo devolvera 2)
+        //Comprueba si hay + de una fila (count siempre devuelve 1, al crear 1 usuario nuevo devolvera 2)
         if( mysqli_num_rows(mysqli_query($conexion, $consulta)) <= 1){ 
-            // cerrar conexión de base de datos
+          return view('install');
+        }else{              
             mysqli_close( $conexion );
             return redirect("/login");
-        }else{              
-            return view('install');
         }
     }
     
