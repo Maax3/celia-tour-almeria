@@ -22,17 +22,17 @@ class Install extends Controller
         $db = mysqli_select_db( $conexion, $baseDeDatosT ) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
         //Antigua SQL -> SHOW TABLES LIKE 'users' y n:  >0
         //---Nueva SQL
-        $consulta = "SELECT COUNT(*) FROM users";
+        $consulta = "SELECT * FROM users";
         $resultado = mysqli_query($conexion, $consulta);
 
-        // Comprobar si la consulta fue exitosa y si hay al menos una fila
-        if ($resultado !== false && mysqli_num_rows($resultado) > 0) {
-            // Hay al menos una fila, cerrar la conexión y redirigir a la página de login
+        // Comprobar si la consulta fue exitosa y si el recuento es igual a 0
+        if ($resultado !== false && mysqli_num_rows($resultado) < 1) {
+            // No hay usuarios en la base de datos, cerrar la conexión y mostrar la vista de instalación
+            return view('install');
+        } else {
+            // Hay uno o más usuarios en la base de datos, cerrar la conexión y redirigir a la página de login
             mysqli_close($conexion);
             return redirect("/login");
-        } else {
-            // No hay filas o hubo un error en la consulta, mostrar la vista de instalación
-            return view('install');
         }
     }
     
